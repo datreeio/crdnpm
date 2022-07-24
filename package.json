@@ -1,6 +1,6 @@
 {
   "name": "@datreeio/crd-directory",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "an NPM package for the crd.directory catalog",
   "homepage": "https://crd.directory",
   "main": "index.js",
