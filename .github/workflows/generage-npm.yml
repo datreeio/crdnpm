@@ -7,10 +7,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          path: main
       - uses: actions/checkout@v3
         with:
           repository: datreeio/CRDs-catalog
           branch: main
+          path: catalog
       - run: |
           ls -la        
       - uses: actions/setup-node@v3
