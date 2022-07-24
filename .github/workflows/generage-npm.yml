@@ -17,6 +17,7 @@ jobs:
       - run: |
           cp main/index.js catalog
           cp main/package.json catalog
+          cp main/README.md catalog
           ls catalog
           cd catalog
           pwd
