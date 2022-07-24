@@ -24,6 +24,9 @@ jobs:
         with:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
-      - run: cd catalog & npm publish
+      - run: |
+        ls -l
+        pwd
+        cd catalog & npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
