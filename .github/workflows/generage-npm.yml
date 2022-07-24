@@ -17,9 +17,9 @@ jobs:
       - run: |
           cp main/index.js catalog
           cp main/package.json catalog
-          ls main
-          cd main
-          ls
+          ls catalog
+          cd catalog
+          pwd
       - uses: actions/setup-node@v3
         with:
           node-version: '16.x'
