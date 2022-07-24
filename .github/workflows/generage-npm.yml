@@ -27,6 +27,8 @@ jobs:
       - run: |
           ls -l
           pwd
-          cd catalog & npm publish
+          cd catalog
+          ls -l
+          npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
