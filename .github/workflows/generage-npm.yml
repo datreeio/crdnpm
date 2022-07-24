@@ -10,10 +10,10 @@ jobs:
         with:
           repository: datreeio/CRDs-catalog
           branch: main
-          run: |
-            ls -la
-            pwd
-            ls
+      - run: |
+          ls -la
+          pwd
+          ls
             
       # - name: Generate NPM package
       #   uses: actions/generate-npm-package@v1
