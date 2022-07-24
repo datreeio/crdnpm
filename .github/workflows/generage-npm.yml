@@ -11,25 +11,11 @@ jobs:
           repository: datreeio/CRDs-catalog
           branch: main
       - run: |
-          ls -la
-          pwd
-          ls
-            
-      # - name: Generate NPM package
-      #   uses: actions/generate-npm-package@v1
-      #   with:
-      #     package-name: ${GITHUB_REPOSITORY}
-      #     package-version: ${GITHUB_SHA}
-      #     package-description: ${GITHUB_REPOSITORY}
-      #     package-author: ${GITHUB_ACTOR}
-      #     package-license: MIT
-      #     package-private: false
-      #     package-scripts:
-      #       start: npm start
-      #       build: npm run build
-      #       test: npm run test
-      #       lint: npm run lint
-      #       prepublish: npm run prepublish
-      #       publish: npm publish
-
-
+          ls -la        
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+          registry-url: 'https://registry.npmjs.org'
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
